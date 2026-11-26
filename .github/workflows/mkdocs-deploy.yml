@@ -24,7 +24,7 @@ jobs:
 
       - run: pip install mkdocs-material
 
-      - name: Hide site title in left sidebar
+      - name: Hide site title in left sidebar and adjust header margin
         run: |
           mkdir -p docs/stylesheets
           cat << 'EOF' >> docs/stylesheets/extra.css
@@ -33,11 +33,28 @@ jobs:
               display: none;
             }
           }
+          [dir="ltr"] .md-header__title {
+            margin-left: 0 !important;
+          }
           EOF
           if ! grep -q "extra_css:" mkdocs.yml; then
             echo -e "\nextra_css:\n  - stylesheets/extra.css" >> mkdocs.yml
           elif ! grep -q "stylesheets/extra.css" mkdocs.yml; then
             sed -i '/extra_css:/a \  - stylesheets/extra.css' mkdocs.yml
           fi
+      
+      - name: Customize UI styles and remove footer credit
+        run: |
+          mkdir -p docs/stylesheets
+          cat << 'EOF' >> docs/stylesheets/extra.css
+          @media screen and (min-width: 76.25em) {
+            .md-nav--primary > .md-nav__title[for="__drawer"] {
+              display: none;
+            }
+          }
+          [dir="ltr"] .md-header__title {
+            margin-left: 0 !important;
+          }
+          EOF
 
       - run: mkdocs gh-deploy --force
