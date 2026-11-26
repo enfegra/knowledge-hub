@@ -6,19 +6,19 @@ on:
     paths:
       - 'docs/'
       - 'docs/**'
-      - 'mkdocs.yaml'
-      - '.github/workflows/mkdocs-deploy.yaml'
+      - 'mkdocs.yml'
+      - '.github/workflows/mkdocs-deploy.yml'
       
 
 jobs:
   deploy-mkdocs:
     runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
