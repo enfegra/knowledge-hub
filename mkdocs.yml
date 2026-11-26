@@ -8,7 +8,6 @@ theme:
   palette:
     primary: black
   features:
-    - navigation.tabs
     - navigation.path
     - toc.follow
 
