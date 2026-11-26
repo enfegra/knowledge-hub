@@ -3,3 +3,14 @@
     display: none;
   }
 }
+[dir="ltr"] .md-header__title {
+  margin-left: 0 !important;
+}
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__title[for="__drawer"] {
+    display: none;
+  }
+}
+[dir="ltr"] .md-header__title {
+  margin-left: 0 !important;
+}
