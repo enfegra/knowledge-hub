@@ -5,3 +5,6 @@ edit_uri: edit/main/docs/
 
 theme:
   name: mkdocs
+
+nav:
+  - index.md
