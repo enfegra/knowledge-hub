@@ -1,7 +1,7 @@
 site_name: Enfegra Knowledge Hub
 repo_url: https://github.com/enfegra/knowledge-hub
 repo_name: enfegra/knowledge-hub
-edit_uri: edit/main/docs/
+edit_uri: blob/main/docs/
 
 theme:
   name: mkdocs
