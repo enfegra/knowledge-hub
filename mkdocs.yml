@@ -7,6 +7,12 @@ theme:
   name: material
   palette:
     primary: black
+  features:
+    - toc.follow
+
+markdown_extensions:
+  - toc:
+      permalink: true
 
 nav:
   - "Knowledge Hub": index.md
