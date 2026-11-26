@@ -1,0 +1,25 @@
+ame: Deploy MkDocs
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/'
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/mkdocs-deploy.yml'
+      
+
+jobs:
+  deploy-mkdocs:
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - run: pip install mkdocs
