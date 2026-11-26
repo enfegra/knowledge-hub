@@ -22,6 +22,4 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install mkdocs
-
-      - run: mkdocs --version
+      - run: pip install mkdocs-material
