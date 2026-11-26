@@ -5,6 +5,8 @@ edit_uri: blob/main/docs/
 
 theme:
   name: material
+  palette:
+    primary: black
 
 nav:
   - index.md
