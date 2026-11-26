@@ -16,4 +16,4 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - "Knowledge Hub": index.md
+  - "Home": index.md
