@@ -9,4 +9,5 @@ theme:
     primary: black
 
 nav:
-  - index.md
+  - "Knowledge Hub":
+    - "Home": index.md
