@@ -4,7 +4,7 @@ repo_name: enfegra/knowledge-hub
 edit_uri: blob/main/docs/
 
 theme:
-  name: material
+  name: mkdocs
 
 nav:
   - index.md
