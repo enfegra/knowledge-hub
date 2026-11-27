@@ -9,6 +9,9 @@ theme:
   favicon: images/favicon.png
   palette:
     primary: black
+  font:
+    text: Poppins
+    code: Roboto Mono
   features:
     - navigation.path
     - toc.follow
