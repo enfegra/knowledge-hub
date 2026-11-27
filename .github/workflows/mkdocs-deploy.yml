@@ -1,4 +1,5 @@
 name: mkdocs-deployment
+
 on:
   push:
     branches:
@@ -9,20 +10,22 @@ on:
       - 'mkdocs.yml'
       - '.github/workflows/mkdocs-deploy.yml'
       
-
 jobs:
   deploy-mkdocs:
     runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 
 
-      - uses: actions/setup-python@v5
+      - name: Setup python 3.11
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - run: pip install mkdocs-material
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material
 
       - name: Hide site title in left sidebar and adjust header margin
         run: |
@@ -57,4 +60,5 @@ jobs:
           }
           EOF
 
-      - run: mkdocs gh-deploy --force
+      - name: Deploy Mkdocs
+        run: mkdocs gh-deploy --force
